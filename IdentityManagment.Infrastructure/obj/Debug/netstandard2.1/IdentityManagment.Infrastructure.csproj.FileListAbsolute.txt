@@ -1,0 +1,3 @@
+D:\Projects\ASP NET Core Angular\IdentityManagment\IdentityManagment.Infrastructure\bin\Debug\netstandard2.1\IdentityManagment.Core.dll
+D:\Projects\ASP NET Core Angular\IdentityManagment\IdentityManagment.Infrastructure\obj\Debug\netstandard2.1\IdentityManagment.Infrastructure.AssemblyInfoInputs.cache
+D:\Projects\ASP NET Core Angular\IdentityManagment\IdentityManagment.Infrastructure\obj\Debug\netstandard2.1\IdentityManagment.Infrastructure.AssemblyInfo.cs
