@@ -4,5 +4,10 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\IdentityManagment.Core\IdentityManagment.Core.csproj" />
+    <ProjectReference Include="..\IdentityManagment.Infrastructure\IdentityManagment.Infrastructure.csproj" />
+  </ItemGroup>
+
 
 </Project>
