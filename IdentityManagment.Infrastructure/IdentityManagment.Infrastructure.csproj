@@ -14,4 +14,8 @@
     <ProjectReference Include="..\IdentityManagment.Core\IdentityManagment.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Data\Repositories\" />
+  </ItemGroup>
+
 </Project>
