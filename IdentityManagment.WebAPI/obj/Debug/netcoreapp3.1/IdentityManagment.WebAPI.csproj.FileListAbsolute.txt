@@ -58,8 +58,6 @@ D:\Projects\ASP NET Core Angular\IdentityManagment\IdentityManagment.WebAPI\bin\
 D:\Projects\ASP NET Core Angular\IdentityManagment\IdentityManagment.WebAPI\obj\Debug\netcoreapp3.1\IdentityManagment.WebAPI.csprojAssemblyReference.cache
 D:\Projects\ASP NET Core Angular\IdentityManagment\IdentityManagment.WebAPI\obj\Debug\netcoreapp3.1\IdentityManagment.WebAPI.AssemblyInfoInputs.cache
 D:\Projects\ASP NET Core Angular\IdentityManagment\IdentityManagment.WebAPI\obj\Debug\netcoreapp3.1\IdentityManagment.WebAPI.AssemblyInfo.cs
-D:\Projects\ASP NET Core Angular\IdentityManagment\IdentityManagment.WebAPI\obj\Debug\netcoreapp3.1\IdentityManagment.WebAPI.csproj.CoreCompileInputs.cache
-D:\Projects\ASP NET Core Angular\IdentityManagment\IdentityManagment.WebAPI\obj\Debug\netcoreapp3.1\IdentityManagment.WebAPI.MvcApplicationPartsAssemblyInfo.cache
 D:\Projects\ASP NET Core Angular\IdentityManagment\IdentityManagment.WebAPI\obj\Debug\netcoreapp3.1\IdentityManagment.WebAPI.RazorTargetAssemblyInfo.cache
 D:\Projects\ASP NET Core Angular\IdentityManagment\IdentityManagment.WebAPI\obj\Debug\netcoreapp3.1\IdentityManagment.WebAPI.csproj.CopyComplete
 D:\Projects\ASP NET Core Angular\IdentityManagment\IdentityManagment.WebAPI\obj\Debug\netcoreapp3.1\staticwebassets\IdentityManagment.WebAPI.StaticWebAssets.Manifest.cache
