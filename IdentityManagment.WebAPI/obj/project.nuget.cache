@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "0aIiBmV19KZFdkxGI9A3KAMahJI3oBiMqs+tpVZkmCL4RVaC04pebq7vj4mKFTdXJPK330AK0nCbOhZHl7xreQ==",
+  "dgSpecHash": "7aHRaHu4wrWqBpfOCaiBKl4TEHCO1Wp981wpGK4DDU1smxtqqJh8txILp+8hVhVV5MazxdzCscCGrvsPmVRmEA==",
   "success": true,
   "projectFilePath": "D:\\Projects\\ASP NET Core Angular\\IdentityManagment\\IdentityManagment.WebAPI\\IdentityManagment.WebAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ANDRIJA\\.nuget\\packages\\automapper\\10.0.0\\automapper.10.0.0.nupkg.sha512",
     "C:\\Users\\ANDRIJA\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.0.1\\automapper.extensions.microsoft.dependencyinjection.8.0.1.nupkg.sha512",
+    "C:\\Users\\ANDRIJA\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.7\\microsoft.aspnetcore.authentication.jwtbearer.3.1.7.nupkg.sha512",
     "C:\\Users\\ANDRIJA\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.7\\microsoft.aspnetcore.cryptography.internal.3.1.7.nupkg.sha512",
     "C:\\Users\\ANDRIJA\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.7\\microsoft.aspnetcore.cryptography.keyderivation.3.1.7.nupkg.sha512",
     "C:\\Users\\ANDRIJA\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\3.1.7\\microsoft.aspnetcore.identity.entityframeworkcore.3.1.7.nupkg.sha512",

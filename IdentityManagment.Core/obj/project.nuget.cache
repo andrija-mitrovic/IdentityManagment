@@ -1,14 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "vpoFpQSRScZ5axhpNCYMxFGI9UBYGOtNZt1ru9x9Gt6iqDhAr891tMnOukJta7V1kDb8PFbRkovJ9eOK69EY8Q==",
+  "dgSpecHash": "Xj7cJb5RipXZKkBsoNOpYlEAINPVFlrYHOQxY5Kh5k4letPpv7+S3uaIoFyBNKajC2sUgMwhDX3XWjledgWLKQ==",
   "success": true,
   "projectFilePath": "D:\\Projects\\ASP NET Core Angular\\IdentityManagment\\IdentityManagment.Core\\IdentityManagment.Core.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\ANDRIJA\\.nuget\\packages\\automapper\\10.0.0\\automapper.10.0.0.nupkg.sha512",
+    "C:\\Users\\ANDRIJA\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.0.1\\automapper.extensions.microsoft.dependencyinjection.8.0.1.nupkg.sha512",
     "C:\\Users\\ANDRIJA\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.7\\microsoft.aspnetcore.cryptography.internal.3.1.7.nupkg.sha512",
     "C:\\Users\\ANDRIJA\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.7\\microsoft.aspnetcore.cryptography.keyderivation.3.1.7.nupkg.sha512",
     "C:\\Users\\ANDRIJA\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\3.1.7\\microsoft.aspnetcore.identity.entityframeworkcore.3.1.7.nupkg.sha512",
     "C:\\Users\\ANDRIJA\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\ANDRIJA\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
+    "C:\\Users\\ANDRIJA\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\ANDRIJA\\.nuget\\packages\\microsoft.entityframeworkcore\\3.1.7\\microsoft.entityframeworkcore.3.1.7.nupkg.sha512",
     "C:\\Users\\ANDRIJA\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\3.1.7\\microsoft.entityframeworkcore.abstractions.3.1.7.nupkg.sha512",
     "C:\\Users\\ANDRIJA\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\3.1.7\\microsoft.entityframeworkcore.analyzers.3.1.7.nupkg.sha512",
@@ -32,6 +35,7 @@
     "C:\\Users\\ANDRIJA\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.1\\system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512",
     "C:\\Users\\ANDRIJA\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
     "C:\\Users\\ANDRIJA\\.nuget\\packages\\system.numerics.vectors\\4.4.0\\system.numerics.vectors.4.4.0.nupkg.sha512",
+    "C:\\Users\\ANDRIJA\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512",
     "C:\\Users\\ANDRIJA\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.7.1\\system.runtime.compilerservices.unsafe.4.7.1.nupkg.sha512",
     "C:\\Users\\ANDRIJA\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512"
   ],

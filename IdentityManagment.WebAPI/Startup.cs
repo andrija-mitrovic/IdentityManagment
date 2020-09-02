@@ -32,6 +32,7 @@ namespace IdentityManagment.WebAPI
             services.ConfigureDatabase(Configuration);
             services.ConfigureService();
             services.ConfigureControllers();
+            services.ConfigureAutoMapper();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -46,6 +47,7 @@ namespace IdentityManagment.WebAPI
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

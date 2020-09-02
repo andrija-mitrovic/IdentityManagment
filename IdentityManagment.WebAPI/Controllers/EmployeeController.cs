@@ -2,14 +2,14 @@
 using IdentityManagment.Core.DTOs;
 using IdentityManagment.Core.Interfaces;
 using IdentityManagment.Core.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace IdentityManagment.WebAPI.Controllers
 {
+    [AllowAnonymous]
     [ApiController]
     [Route("api/[controller]")]
     public class EmployeeController:ControllerBase
