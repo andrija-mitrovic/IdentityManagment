@@ -57,7 +57,7 @@ namespace IdentityManagment.WebAPI.Extensions
 
         public static void ConfigureAutoMapper(this IServiceCollection services)
         {
-            services.AddAutoMapper(typeof(EmployeeRepository).Assembly);
+            services.AddAutoMapper(typeof(Startup).Assembly);
         }
 
         public static void ConfigureControllers(this IServiceCollection services)

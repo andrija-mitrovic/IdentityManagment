@@ -5,5 +5,5 @@ D:\Projects\ASP NET Core Angular\IdentityManagment\IdentityManagment.Core\obj\De
 D:\Projects\ASP NET Core Angular\IdentityManagment\IdentityManagment.Core\bin\Debug\netstandard2.1\IdentityManagment.Core.pdb
 D:\Projects\ASP NET Core Angular\IdentityManagment\IdentityManagment.Core\obj\Debug\netstandard2.1\IdentityManagment.Core.dll
 D:\Projects\ASP NET Core Angular\IdentityManagment\IdentityManagment.Core\obj\Debug\netstandard2.1\IdentityManagment.Core.pdb
-D:\Projects\ASP NET Core Angular\IdentityManagment\IdentityManagment.Core\obj\Debug\netstandard2.1\IdentityManagment.Core.csprojAssemblyReference.cache
 D:\Projects\ASP NET Core Angular\IdentityManagment\IdentityManagment.Core\obj\Debug\netstandard2.1\IdentityManagment.Core.csproj.CoreCompileInputs.cache
+D:\Projects\ASP NET Core Angular\IdentityManagment\IdentityManagment.Core\obj\Debug\netstandard2.1\IdentityManagment.Core.csprojAssemblyReference.cache

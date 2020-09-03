@@ -7,9 +7,9 @@ using System.Text;
 
 namespace IdentityManagment.Core.Helpers
 {
-    public class AutoMapperProfile:Profile
+    public class AutoMapperProfiles:Profile
     {
-        public AutoMapperProfile()
+        public AutoMapperProfiles()
         {
             CreateMap<Employee, EmployeeDto>();
             CreateMap<EmployeeDto, Employee>();
