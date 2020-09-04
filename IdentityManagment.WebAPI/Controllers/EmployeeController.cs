@@ -5,11 +5,11 @@ using IdentityManagment.Core.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace IdentityManagment.WebAPI.Controllers
 {
-    [AllowAnonymous]
     [ApiController]
     [Route("api/[controller]")]
     public class EmployeeController:ControllerBase
@@ -27,8 +27,10 @@ namespace IdentityManagment.WebAPI.Controllers
         public async Task<IActionResult> GetEmployees()
         {
             var employees = await _unitOfWork.Employees.GetAllAsync();
+
+            var employeesDto = _mapper.Map<IEnumerable<EmployeeDetailDto>>(employees);
             
-            return Ok(employees);
+            return Ok(employeesDto);
         }
 
         [HttpGet("{id}")]
@@ -41,13 +43,15 @@ namespace IdentityManagment.WebAPI.Controllers
                 return NotFound();
             }
 
-            return Ok(employee);
+            var employeeDto = _mapper.Map<EmployeeDetailDto>(employee);
+
+            return Ok(employeeDto);
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateEmployee(EmployeeDto employeeDto)
+        public async Task<IActionResult> CreateEmployee(EmployeeCreateDto employeeCreateDto)
         {
-            var employee = _mapper.Map<Employee>(employeeDto);
+            var employee = _mapper.Map<Employee>(employeeCreateDto);
 
             await _unitOfWork.Employees.AddAsync(employee);
 
@@ -60,7 +64,7 @@ namespace IdentityManagment.WebAPI.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateEmployee(int id, EmployeeDto employeeDto)
+        public async Task<IActionResult> UpdateEmployee(int id, EmployeeUpdateDto employeeUpdateDto)
         {
             var employee = await _unitOfWork.Employees.GetByIdAsync(id);
 
@@ -69,8 +73,7 @@ namespace IdentityManagment.WebAPI.Controllers
                 return NotFound();
             }
 
-            _mapper.Map(employeeDto, employee);
-            _unitOfWork.Employees.Update(employee);
+            _mapper.Map(employeeUpdateDto, employee);
 
             if(await _unitOfWork.SaveAsync())
             {

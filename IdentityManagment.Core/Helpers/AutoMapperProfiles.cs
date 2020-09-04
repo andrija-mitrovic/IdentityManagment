@@ -11,8 +11,9 @@ namespace IdentityManagment.Core.Helpers
     {
         public AutoMapperProfiles()
         {
-            CreateMap<Employee, EmployeeDto>();
-            CreateMap<EmployeeDto, Employee>();
+            CreateMap<EmployeeUpdateDto, Employee>();
+            CreateMap<EmployeeCreateDto, Employee>();
+            CreateMap<Employee, EmployeeDetailDto>();
         }
     }
 }
