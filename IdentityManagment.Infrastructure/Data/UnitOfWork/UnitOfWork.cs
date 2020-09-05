@@ -11,6 +11,7 @@ namespace IdentityManagment.Infrastructure.Data.UnitOfWork
     {
         private readonly ApplicationDbContext _context;
         private IEmployeeRepository _employees;
+        private IUserRepository _users;
 
         public UnitOfWork(ApplicationDbContext context)
         {
@@ -19,6 +20,9 @@ namespace IdentityManagment.Infrastructure.Data.UnitOfWork
 
         public IEmployeeRepository Employees
             => _employees = _employees ?? new EmployeeRepository(_context);
+
+        public IUserRepository Users
+            => _users = _users ?? new UserRepository(_context);
 
         public async Task<bool> SaveAsync()
             => await _context.SaveChangesAsync() > 0;

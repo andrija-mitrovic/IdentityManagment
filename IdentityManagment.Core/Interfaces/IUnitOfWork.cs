@@ -8,6 +8,7 @@ namespace IdentityManagment.Core.Interfaces
     public interface IUnitOfWork : IDisposable
     {
         IEmployeeRepository Employees { get; }
+        IUserRepository Users { get; }
         Task<bool> SaveAsync();
     }
 }
