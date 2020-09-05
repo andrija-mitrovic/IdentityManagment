@@ -68,5 +68,6 @@ D:\Projects\ASP NET Core Angular\IdentityManagment\IdentityManagment.WebAPI\obj\
 D:\Projects\ASP NET Core Angular\IdentityManagment\IdentityManagment.WebAPI\bin\Debug\netcoreapp3.1\AutoMapper.dll
 D:\Projects\ASP NET Core Angular\IdentityManagment\IdentityManagment.WebAPI\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 D:\Projects\ASP NET Core Angular\IdentityManagment\IdentityManagment.WebAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Projects\ASP NET Core Angular\IdentityManagment\IdentityManagment.WebAPI\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
 D:\Projects\ASP NET Core Angular\IdentityManagment\IdentityManagment.WebAPI\obj\Debug\netcoreapp3.1\IdentityManagment.WebAPI.csproj.CoreCompileInputs.cache
 D:\Projects\ASP NET Core Angular\IdentityManagment\IdentityManagment.WebAPI\obj\Debug\netcoreapp3.1\IdentityManagment.WebAPI.MvcApplicationPartsAssemblyInfo.cache

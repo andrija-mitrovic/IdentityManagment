@@ -69,6 +69,7 @@ namespace IdentityManagment.Infrastructure.Migrations
                     Designation = table.Column<string>(nullable: true),
                     Email = table.Column<string>(nullable: true),
                     City = table.Column<string>(nullable: true),
+                    Country = table.Column<string>(nullable: true),
                     Address = table.Column<string>(nullable: true)
                 },
                 constraints: table =>

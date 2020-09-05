@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
 using IdentityManagment.Core.DTOs;
+using IdentityManagment.Core.Interfaces;
 using IdentityManagment.Core.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -24,18 +25,21 @@ namespace IdentityManagment.WebAPI.Controllers
     {
         private readonly IConfiguration _config;
         private readonly IMapper _mapper;
+        private readonly IJwtTokenService _jwtTokenService;
         private readonly UserManager<User> _userManager;
         private readonly SignInManager<User> _signInManager;
 
         public AuthController(
             IConfiguration config,
             IMapper mapper,
+            IJwtTokenService jwtTokenService,
             UserManager<User> userManager,
             SignInManager<User> signInManager
             )
         {
             _config = config;
             _mapper = mapper;
+            _jwtTokenService = jwtTokenService;
             _userManager = userManager;
             _signInManager = signInManager;
         }
@@ -60,6 +64,11 @@ namespace IdentityManagment.WebAPI.Controllers
         {
             var user = await _userManager.FindByNameAsync(userLoginDto.Username);
 
+            if (user == null)
+            {
+                return Unauthorized();
+            }
+
             var result = await _signInManager.CheckPasswordSignInAsync(user, userLoginDto.Password, false);
 
             if(result.Succeeded)
@@ -68,7 +77,7 @@ namespace IdentityManagment.WebAPI.Controllers
 
                 return Ok(new
                 {
-                    token=await GenerateJwtToken(user),
+                    token=await _jwtTokenService.GenerateToken(user),
                     user=userApp
                 });
             }

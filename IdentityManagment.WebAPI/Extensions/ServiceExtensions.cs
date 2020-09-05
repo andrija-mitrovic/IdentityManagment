@@ -36,7 +36,7 @@ namespace IdentityManagment.WebAPI.Extensions
             builder.AddEntityFrameworkStores<ApplicationDbContext>();
             builder.AddRoleValidator<RoleValidator<Role>>();
             builder.AddRoleManager<RoleManager<Role>>();
-           // builder.AddSignInManager<SignInManager<User>>();
+            builder.AddSignInManager<SignInManager<User>>();
         }
 
         public static void ConfigureAuthentication(this IServiceCollection services, IConfiguration config)
@@ -53,11 +53,6 @@ namespace IdentityManagment.WebAPI.Extensions
                         ValidateAudience = false
                     };
                 });
-        }
-
-        public static void ConfigureAutoMapper(this IServiceCollection services)
-        {
-            services.AddAutoMapper(typeof(Startup).Assembly);
         }
 
         public static void ConfigureControllers(this IServiceCollection services)

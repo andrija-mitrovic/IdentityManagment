@@ -14,6 +14,9 @@ namespace IdentityManagment.Core.Helpers
             CreateMap<EmployeeUpdateDto, Employee>();
             CreateMap<EmployeeCreateDto, Employee>();
             CreateMap<Employee, EmployeeDetailDto>();
+            CreateMap<UserRegisterDto, User>();
+            CreateMap<UserLoginDto, User>();
+            CreateMap<User, UserDetailDto>();
         }
     }
 }
