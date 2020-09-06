@@ -1,5 +1,4 @@
-﻿using AutoMapper;
-using IdentityManagment.Core.Interfaces;
+﻿using IdentityManagment.Core.Interfaces;
 using IdentityManagment.Core.Models;
 using IdentityManagment.Infrastructure.Data;
 using IdentityManagment.Infrastructure.Data.Repositories;
@@ -22,21 +21,12 @@ namespace IdentityManagment.WebAPI.Extensions
 {
     public static class ServiceExtensions
     {
-        public static void ConfigureIdentity(this IServiceCollection services)
+        public static void ConfigureAuthorization(this IServiceCollection services)
         {
-            IdentityBuilder builder = services.AddIdentityCore<User>(options=> 
-            {
-                options.Password.RequireDigit = false;
-                options.Password.RequiredLength = 4;
-                options.Password.RequireNonAlphanumeric = false;
-                options.Password.RequireUppercase = false;
+            services.AddAuthorization(options => {
+                options.AddPolicy("RequireAdminRole", policy => policy.RequireRole("Admin"));
+                options.AddPolicy("VipOnly", policy => policy.RequireRole("VIP"));
             });
-
-            builder = new IdentityBuilder(builder.UserType, typeof(Role), builder.Services);
-            builder.AddEntityFrameworkStores<ApplicationDbContext>();
-            builder.AddRoleValidator<RoleValidator<Role>>();
-            builder.AddRoleManager<RoleManager<Role>>();
-            builder.AddSignInManager<SignInManager<User>>();
         }
 
         public static void ConfigureAuthentication(this IServiceCollection services, IConfiguration config)
@@ -65,19 +55,6 @@ namespace IdentityManagment.WebAPI.Extensions
 
                 options.Filters.Add(new AuthorizeFilter(policy));
             });
-        }
-
-        public static void ConfigureDatabase(this IServiceCollection services, IConfiguration config)
-        {
-            services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(
-                    config.GetConnectionString("DefaultConnection")));
-        }
-
-        public static void ConfigureService(this IServiceCollection services)
-        {
-            services.AddScoped<IEmployeeRepository, EmployeeRepository>();
-            services.AddScoped<IUnitOfWork, UnitOfWork>();
         }
     }
 }

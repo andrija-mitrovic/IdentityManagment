@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using IdentityManagment.Core.DTOs;
 using IdentityManagment.Core.Interfaces;
 using IdentityManagment.Core.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -18,12 +19,16 @@ namespace IdentityManagment.WebAPI.Controllers
         private readonly IUnitOfWork _unitOfWork;
         private readonly UserManager<User> _userManager;
 
-        public AdminController(IUnitOfWork unitOfWork,UserManager<User> userManager)
+        public AdminController(
+            IUnitOfWork unitOfWork,
+            UserManager<User> userManager
+            )
         {
             _unitOfWork = unitOfWork;
             _userManager = userManager;
         }
 
+        [Authorize(Policy = "RequireAdminRole")]
         [HttpGet("usersWithRoles")]
         public async Task<IActionResult> GetUsersWithRoles()
         {
@@ -32,6 +37,7 @@ namespace IdentityManagment.WebAPI.Controllers
             return Ok(userList);
         }
 
+        [Authorize(Policy = "RequireAdminRole")]
         [HttpPost("editRoles/{userName}")]
         public async Task<IActionResult> EditRoles(string userName, RoleEditDto roleEditDto)
         {

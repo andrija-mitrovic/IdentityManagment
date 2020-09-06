@@ -17,7 +17,10 @@ namespace IdentityManagment.WebAPI.Controllers
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
 
-        public EmployeeController(IUnitOfWork unitOfWork, IMapper mapper)
+        public EmployeeController(
+            IUnitOfWork unitOfWork, 
+            IMapper mapper
+            )
         {
             _unitOfWork = unitOfWork;
             _mapper = mapper;

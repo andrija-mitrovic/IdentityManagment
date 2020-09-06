@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using IdentityManagment.Core;
+using IdentityManagment.Infrastructure;
 using IdentityManagment.WebAPI.Extensions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
@@ -33,12 +34,18 @@ namespace IdentityManagment.WebAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddCors();
-            services.AddApplication();
+            services.AddCore();
+            services.AddInfrastructure(Configuration);
+            services.ConfigureControllers();
+            services.ConfigureAuthentication(Configuration);
+            services.ConfigureAuthorization();
+            /*services.AddCore();
             services.ConfigureIdentity();
             services.ConfigureDatabase(Configuration);
             services.ConfigureService();
             services.ConfigureControllers();
             services.ConfigureAuthentication(Configuration);
+            services.ConfigureAuthorization();*/
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

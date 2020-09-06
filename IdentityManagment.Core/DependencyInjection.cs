@@ -11,12 +11,17 @@ namespace IdentityManagment.Core
 {
     public static class DependencyInjection
     {
-        public static IServiceCollection AddApplication(this IServiceCollection services)
+        public static IServiceCollection AddCore(this IServiceCollection services)
         {
-            services.AddScoped<IJwtTokenService, JwtTokenService>();
+            services.ConfigureInjection();
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
             return services;
+        }
+
+        private static void ConfigureInjection(this IServiceCollection services)
+        {
+            services.AddScoped<IJwtTokenService, JwtTokenService>();
         }
     }
 }
