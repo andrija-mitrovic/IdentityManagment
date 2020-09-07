@@ -39,13 +39,6 @@ namespace IdentityManagment.WebAPI
             services.ConfigureControllers();
             services.ConfigureAuthentication(Configuration);
             services.ConfigureAuthorization();
-            /*services.AddCore();
-            services.ConfigureIdentity();
-            services.ConfigureDatabase(Configuration);
-            services.ConfigureService();
-            services.ConfigureControllers();
-            services.ConfigureAuthentication(Configuration);
-            services.ConfigureAuthorization();*/
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
