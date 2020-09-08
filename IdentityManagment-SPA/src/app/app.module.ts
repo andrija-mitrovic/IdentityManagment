@@ -11,6 +11,7 @@ import { RolesModelComponent } from './admin/roles-model/roles-model.component';
 import { EmployeesComponent } from './employees/employees.component';
 import { RouterModule } from '@angular/router';
 import { appRoutes } from './routes';
+import { AlertifyService } from './_services/alertify.service';
 
 @NgModule({
   declarations: [			
@@ -27,7 +28,9 @@ import { appRoutes } from './routes';
     BrowserModule,
     RouterModule.forRoot(appRoutes),
   ],
-  providers: [],
+  providers: [
+    AlertifyService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
