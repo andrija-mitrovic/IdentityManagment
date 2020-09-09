@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { JwtModule } from '@auth0/angular-jwt';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
@@ -16,6 +18,7 @@ import { RouterModule } from '@angular/router';
 import { appRoutes } from './routes';
 import { AlertifyService } from './_services/alertify.service';
 import { AuthService } from './_services/auth.service';
+import { ErrorInterceptorProvider } from './_services/error.interceptor';
 
 export function tokenGetter() {
   return localStorage.getItem('token');
@@ -37,6 +40,8 @@ export function tokenGetter() {
     RouterModule.forRoot(appRoutes),
     HttpClientModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
+    BsDropdownModule.forRoot(),
     FormsModule,
     JwtModule.forRoot({
       config: {
@@ -48,6 +53,7 @@ export function tokenGetter() {
   ],
   providers: [
     AlertifyService,
+    ErrorInterceptorProvider,
     AuthService
   ],
   bootstrap: [AppComponent]
