@@ -13,12 +13,13 @@ import { RegisterComponent } from './home/register/register.component';
 import { UserManagmentComponent } from './admin/user-managment/user-managment.component';
 import { AdminPanelComponent } from './admin/admin-panel/admin-panel.component';
 import { RolesModelComponent } from './admin/roles-model/roles-model.component';
-import { EmployeesComponent } from './employees/employees.component';
 import { RouterModule } from '@angular/router';
 import { appRoutes } from './routes';
 import { AlertifyService } from './_services/alertify.service';
 import { AuthService } from './_services/auth.service';
 import { ErrorInterceptorProvider } from './_services/error.interceptor';
+import { EmployeeListComponent } from './employee/employee-list/employee-list.component';
+import { EmployeeService } from './_services/employee.service';
 
 export function tokenGetter() {
   return localStorage.getItem('token');
@@ -33,7 +34,7 @@ export function tokenGetter() {
       UserManagmentComponent,
       AdminPanelComponent,
       RolesModelComponent,
-      EmployeesComponent
+      EmployeeListComponent
    ],
   imports: [
     BrowserModule,
@@ -54,7 +55,8 @@ export function tokenGetter() {
   providers: [
     AlertifyService,
     ErrorInterceptorProvider,
-    AuthService
+    AuthService,
+    EmployeeService
   ],
   bootstrap: [AppComponent]
 })

@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\ASP NET Core Angular\\IdentityManagment\\IdentityManagment.WebApi\\IdentityManagment.WebAPI.csproj": {}
+    "D:\\Projects\\ASP NET Core Angular\\IdentityManagment\\IdentityManagment.WebAPI\\IdentityManagment.WebAPI.csproj": {}
   },
   "projects": {
     "D:\\Projects\\ASP NET Core Angular\\IdentityManagment\\IdentityManagment.Core\\IdentityManagment.Core.csproj": {
@@ -154,14 +154,14 @@
         }
       }
     },
-    "D:\\Projects\\ASP NET Core Angular\\IdentityManagment\\IdentityManagment.WebApi\\IdentityManagment.WebAPI.csproj": {
+    "D:\\Projects\\ASP NET Core Angular\\IdentityManagment\\IdentityManagment.WebAPI\\IdentityManagment.WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\ASP NET Core Angular\\IdentityManagment\\IdentityManagment.WebApi\\IdentityManagment.WebAPI.csproj",
+        "projectUniqueName": "D:\\Projects\\ASP NET Core Angular\\IdentityManagment\\IdentityManagment.WebAPI\\IdentityManagment.WebAPI.csproj",
         "projectName": "IdentityManagment.WebAPI",
-        "projectPath": "D:\\Projects\\ASP NET Core Angular\\IdentityManagment\\IdentityManagment.WebApi\\IdentityManagment.WebAPI.csproj",
+        "projectPath": "D:\\Projects\\ASP NET Core Angular\\IdentityManagment\\IdentityManagment.WebAPI\\IdentityManagment.WebAPI.csproj",
         "packagesPath": "C:\\Users\\ANDRIJA\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\ASP NET Core Angular\\IdentityManagment\\IdentityManagment.WebApi\\obj\\",
+        "outputPath": "D:\\Projects\\ASP NET Core Angular\\IdentityManagment\\IdentityManagment.WebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
