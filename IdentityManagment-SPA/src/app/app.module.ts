@@ -20,6 +20,10 @@ import { AuthService } from './_services/auth.service';
 import { ErrorInterceptorProvider } from './_services/error.interceptor';
 import { EmployeeListComponent } from './employee/employee-list/employee-list.component';
 import { EmployeeService } from './_services/employee.service';
+import { EmployeeCreateComponent } from './employee/employee-create/employee-create.component';
+import { EmployeeEditComponent } from './employee/employee-edit/employee-edit.component';
+import { EmployeeEditResolver } from './_resolvers/employee-edit.resolver';
+import { EmployeeListResolver } from './_resolvers/employee-list.resolver';
 
 export function tokenGetter() {
   return localStorage.getItem('token');
@@ -34,7 +38,9 @@ export function tokenGetter() {
       UserManagmentComponent,
       AdminPanelComponent,
       RolesModelComponent,
-      EmployeeListComponent
+      EmployeeListComponent,
+      EmployeeCreateComponent,
+      EmployeeEditComponent
    ],
   imports: [
     BrowserModule,
@@ -56,7 +62,9 @@ export function tokenGetter() {
     AlertifyService,
     ErrorInterceptorProvider,
     AuthService,
-    EmployeeService
+    EmployeeService,
+    EmployeeEditResolver,
+    EmployeeListResolver
   ],
   bootstrap: [AppComponent]
 })

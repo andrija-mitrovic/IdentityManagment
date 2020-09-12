@@ -1,0 +1,112 @@
+<div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-4">
+        <form [formGroup]="employeeForm" (ngSubmit)="updateEmployee()">
+          <h2 class="text-center">Update Employee</h2>
+          <hr />
+  
+          <div class="form-group">
+            <label class="control-label" style="margin-right: 10px"
+              >Gender:
+            </label>
+            <label class="radio-inline">
+              <input
+                class="mr-3"
+                type="radio"
+                value="male"
+                formControlName="gender"
+              />Male
+            </label>
+            <label class="radio-inline ml-3">
+              <input
+                class="mr-3"
+                type="radio"
+                value="female"
+                formControlName="gender"
+              />Female
+            </label>
+          </div>
+  
+          <div class="form-group">
+            <input
+              type="text"
+              [ngClass]="{
+                'is-invalid':
+                  employeeForm.get('firstName').errors &&
+                  employeeForm.get('firstName').touched
+              }"
+              class="form-control"
+              formControlName="firstName"
+              placeholder="First Name"
+            />
+            <div class="invalid-feedback">First name is required</div>
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              [ngClass]="{
+                'is-invalid':
+                  employeeForm.get('lastName').errors &&
+                  employeeForm.get('lastName').touched
+              }"
+              class="form-control"
+              formControlName="lastName"
+              placeholder="Last Name"
+            />
+            <div class="invalid-feedback">Last name is required</div>
+          </div>
+          <div class="form-group">
+            <input [ngClass]="{'is-invalid': employeeForm.get('dateOfBirth').errors && employeeForm.get('dateOfBirth').touched}" class="form-control"
+              placeholder="Date of Birth" formControlName="dateOfBirth" type="date" >
+            <div class="invalid-feedback" *ngIf="employeeForm.get('dateOfBirth').touched && employeeForm.get('dateOfBirth').hasError('required')">Date of Birth is required</div>
+          </div>
+          <div class="form-group">
+            <input
+              class="form-control"
+              placeholder="Phone"
+              formControlName="phone"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              class="form-control"
+              placeholder="Designation"
+              formControlName="designation"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              class="form-control"
+              placeholder="Email"
+              formControlName="email"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              class="form-control"
+              placeholder="City"
+              formControlName="city"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              class="form-control"
+              placeholder="Address"
+              formControlName="address"
+            />
+          </div>
+          <div class="form-group text-center">
+            <button
+              class="btn btn-success"
+              type="submit"
+              [disabled]="!employeeForm.valid"
+            >
+              Update
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  

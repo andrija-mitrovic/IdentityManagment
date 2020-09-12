@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bAwdiu7Gq6xpKXT5mHE62yNfphf6tC13FiVhL7WV/5+rCgLttgs2Va2MzeP7dXsglGQo+wYhAym0DoCu5WIHKw==",
+  "dgSpecHash": "7jGOwBrhiQHpfiRO4neD3iog3uuOx5MVJSsCJtMTXoEv6yNztsWVzO0Q4M47dUCEsyDBEGbSzK5sNrEMjua+uw==",
   "success": true,
-  "projectFilePath": "D:\\Projects\\ASP NET Core Angular\\IdentityManagment\\IdentityManagment.Webapi\\IdentityManagment.WebAPI.csproj",
+  "projectFilePath": "D:\\Projects\\ASP NET Core Angular\\IdentityManagment\\IdentityManagment.webapi\\IdentityManagment.WebAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ANDRIJA\\.nuget\\packages\\automapper\\10.0.0\\automapper.10.0.0.nupkg.sha512",
     "C:\\Users\\ANDRIJA\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.0.1\\automapper.extensions.microsoft.dependencyinjection.8.0.1.nupkg.sha512",
