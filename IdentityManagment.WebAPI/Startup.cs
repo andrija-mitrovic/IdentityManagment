@@ -5,6 +5,7 @@ using System.Net;
 using System.Threading.Tasks;
 using IdentityManagment.Core;
 using IdentityManagment.Infrastructure;
+using IdentityManagment.Infrastructure.Data;
 using IdentityManagment.WebAPI.Extensions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
@@ -42,7 +43,7 @@ namespace IdentityManagment.WebAPI
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, Seed seed)
         {
             if (env.IsDevelopment())
             {
@@ -64,7 +65,7 @@ namespace IdentityManagment.WebAPI
             }
 
             //app.UseHttpsRedirection();
-
+            //seed.SeedUsers();
             app.UseRouting();
             app.UseCors(x => x.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
             app.UseAuthentication();

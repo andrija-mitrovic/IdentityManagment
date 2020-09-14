@@ -51,6 +51,7 @@ namespace IdentityManagment.Infrastructure
         {
             services.AddScoped<IEmployeeRepository, EmployeeRepository>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<Seed>();
         }
     }
 }
