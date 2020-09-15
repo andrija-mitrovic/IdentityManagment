@@ -24,6 +24,8 @@ import { EmployeeCreateComponent } from './employee/employee-create/employee-cre
 import { EmployeeEditComponent } from './employee/employee-edit/employee-edit.component';
 import { EmployeeEditResolver } from './_resolvers/employee-edit.resolver';
 import { EmployeeListResolver } from './_resolvers/employee-list.resolver';
+import { HasRoleDirective } from './_directives/hasRole.directive';
+import { AdminService } from './_services/admin.service';
 
 export function tokenGetter() {
   return localStorage.getItem('token');
@@ -40,7 +42,8 @@ export function tokenGetter() {
       RolesModelComponent,
       EmployeeListComponent,
       EmployeeCreateComponent,
-      EmployeeEditComponent
+      EmployeeEditComponent,
+      HasRoleDirective
    ],
   imports: [
     BrowserModule,
@@ -64,7 +67,8 @@ export function tokenGetter() {
     AuthService,
     EmployeeService,
     EmployeeEditResolver,
-    EmployeeListResolver
+    EmployeeListResolver,
+    AdminService
   ],
   bootstrap: [AppComponent]
 })

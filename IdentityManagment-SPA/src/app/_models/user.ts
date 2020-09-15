@@ -8,4 +8,5 @@ export interface User {
     lastActive: Date;
     city: string;
     country: string;
+    roles?: string[];
 }

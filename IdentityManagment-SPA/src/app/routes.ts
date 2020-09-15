@@ -18,7 +18,7 @@ export const appRoutes: Routes = [
             {path: 'employees', component: EmployeeListComponent, resolve: {employees: EmployeeListResolver}},
             {path: 'employees/create', component: EmployeeCreateComponent},
             {path: 'employee/edit/:id', component: EmployeeEditComponent, resolve: {employee: EmployeeEditResolver}},
-            {path: 'admin', component: AdminPanelComponent, data: {roles: ['Admin', 'Moderator']}}
+            {path: 'admin', component: AdminPanelComponent, data: {roles: ['Admin']}}
         ]
     },
     {path: '**', redirectTo: '', pathMatch: 'full'}

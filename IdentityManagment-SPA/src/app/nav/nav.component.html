@@ -6,8 +6,8 @@
       <li class="nav-item" routerLinkActive="active">
         <a class="nav-link" [routerLink]="['/employees']">Employees</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link">Admin</a>
+      <li *appHasRole="['Admin']" routerLinkActive="active" class="nav-item">
+        <a class="nav-link" [routerLink]="['/admin']" >Admin</a>
       </li>
     </ul>
 
