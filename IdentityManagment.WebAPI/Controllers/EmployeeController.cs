@@ -26,6 +26,8 @@ namespace IdentityManagment.WebAPI.Controllers
             _mapper = mapper;
         }
 
+        //[Authorize(Roles="Admin, Read")]
+        [Authorize(Policy="EmployeeReadRole")]
         [HttpGet]
         public async Task<IActionResult> GetEmployees()
         {
@@ -36,6 +38,8 @@ namespace IdentityManagment.WebAPI.Controllers
             return Ok(employeesDto);
         }
 
+        [Authorize(Roles="Admin, Read")]
+        //[Authorize(Policy="EmployeeReadRole")]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetEmployee(int id)
         {
@@ -51,6 +55,8 @@ namespace IdentityManagment.WebAPI.Controllers
             return Ok(employeeDto);
         }
 
+        //[Authorize(Roles="Admin, Create")]
+        [Authorize(Policy="EmployeeCreateRole")]
         [HttpPost]
         public async Task<IActionResult> CreateEmployee(EmployeeCreateDto employeeCreateDto)
         {
@@ -66,6 +72,8 @@ namespace IdentityManagment.WebAPI.Controllers
             throw new Exception("Creating employee failed on save");
         }
 
+        //[Authorize(Roles="Admin, Update")]     
+        [Authorize(Policy="EmployeeUpdateRole")]  
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateEmployee(int id, EmployeeUpdateDto employeeUpdateDto)
         {
@@ -86,6 +94,8 @@ namespace IdentityManagment.WebAPI.Controllers
             throw new Exception($"Updating user {id} failed on save");
         }
 
+        //[Authorize(Roles="Admin, Delete")]
+        [Authorize(Policy="EmployeeDeleteRole")]
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteEmployee(int id)
         {

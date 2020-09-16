@@ -25,9 +25,12 @@ namespace IdentityManagment.WebAPI.Extensions
         {
             services.AddAuthorization(options => {
                 options.AddPolicy("RequireAdminRole", policy => policy.RequireRole("Admin"));
-                options.AddPolicy("ModerateEmployeeRole", policy => policy.RequireRole("Admin", "Create", 
-                    "Update", "Read", "Delete"));
-                options.AddPolicy("BaseEmployee", policy => policy.RequireRole("Read"));
+                /*options.AddPolicy("ModerateEmployeeCreateRole", policy => policy.RequireRole("Admin", "Create", 
+                    "Update", "Read", "Delete"));*/
+                options.AddPolicy("EmployeeCreateRole", policy => policy.RequireRole("Admin", "Create"));
+                options.AddPolicy("EmployeeDeleteRole", policy => policy.RequireRole("Admin", "Delete"));
+                options.AddPolicy("EmployeeUpdateRole", policy => policy.RequireRole("Admin", "Update"));
+                options.AddPolicy("EmployeeReadRole", policy => policy.RequireRole("Admin", "Read"));
             });
         }
 

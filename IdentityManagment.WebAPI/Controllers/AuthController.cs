@@ -53,6 +53,8 @@ namespace IdentityManagment.WebAPI.Controllers
 
             if (result.Succeeded)
             {
+                var userCreated=_userManager.FindByNameAsync(user.UserName).Result;
+                await _userManager.AddToRoleAsync(userCreated, "Read");
                 return StatusCode(201);
             }
 

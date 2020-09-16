@@ -5,6 +5,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { JwtModule } from '@auth0/angular-jwt';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
@@ -26,6 +27,7 @@ import { EmployeeEditResolver } from './_resolvers/employee-edit.resolver';
 import { EmployeeListResolver } from './_resolvers/employee-list.resolver';
 import { HasRoleDirective } from './_directives/hasRole.directive';
 import { AdminService } from './_services/admin.service';
+import { from } from 'rxjs';
 
 export function tokenGetter() {
   return localStorage.getItem('token');
@@ -53,6 +55,7 @@ export function tokenGetter() {
     BrowserAnimationsModule,
     BsDropdownModule.forRoot(),
     FormsModule,
+    ModalModule.forRoot(),
     JwtModule.forRoot({
       config: {
         tokenGetter: tokenGetter,
@@ -69,6 +72,9 @@ export function tokenGetter() {
     EmployeeEditResolver,
     EmployeeListResolver,
     AdminService
+  ],
+  entryComponents: [
+    RolesModelComponent
   ],
   bootstrap: [AppComponent]
 })

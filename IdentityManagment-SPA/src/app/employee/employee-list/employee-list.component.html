@@ -4,7 +4,7 @@
       <h2>Employees</h2>
     </div>
     <div class="col-md-2">
-      <a
+      <a *appHasRole="['Admin', 'Create']"
         class="btn btn-outline-success float-md-right mb-2"
         [routerLink]="['/employees/create']"
         >New Employee</a
@@ -43,12 +43,14 @@
             <td>{{ employee.address }}</td>
             <td>
               <button
+                *appHasRole="['Admin', 'Edit']"
                 class="btn btn-sm btn-info mr-2"
                 style="width: 60px"
                 [routerLink]="['/employee/edit/', employee.id]"
               >
                 Edit</button
               ><button
+                *appHasRole="['Admin', 'Delete']"
                 class="btn btn-sm btn-danger"
                 (click)="deleteEmployee(employee.id)"
               >
